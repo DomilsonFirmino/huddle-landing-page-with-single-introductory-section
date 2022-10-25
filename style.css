@@ -104,7 +104,17 @@ main{
     text-align: center;
 }
 
-i + i {
+
+.icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: white solid 2pt;
+}
+.icon + .icon{
     margin-left: 1em;
     margin-top: 0;
 }
@@ -142,14 +152,17 @@ i + i {
         text-align: end;
     }
     button,
-    .fa-brands{
+    .icon{
         cursor: pointer;
     }
     button:hover{
         background-color: var(--clr-p-smagenta);
         color: white;
     }
-    .fa-brands:hover{
+    .icon:hover .fa-brands{
         color: var(--clr-p-smagenta);
+    }
+    .icon:hover{
+        border:var(--clr-p-smagenta) solid 2pt;
     }
 }
