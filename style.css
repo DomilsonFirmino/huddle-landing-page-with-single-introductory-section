@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
 :root{
+
     --clr-p-violet: hsl(257 40% 49%);
-    --clr-p-smagenta: hsl(300 69 71);
+    --clr-p-smagenta: hsl(300 69% 71%);
     --clr-p-white: hsl(0, 0%, 100%);
 
-    --ff-body-opensans: 'Open sans',sans serief;
-    --ff-header: 'Poppins',sans serief;
+    --ff-body-opensans: 'Open Sans', sans-serif;
+    --ff-header: 'Poppins', sans-serif;
     
     --fw-400: 400;
     --fw-600: 600;
@@ -12,6 +15,7 @@
     --fs-400: 1rem;
     --fs-500: 1.5rem;
     --fs-600: 2rem;
+
 }
 
 
@@ -85,8 +89,26 @@ button{
     border-radius: 100px;
     border-style: none;
     
-    cursor: pointer;
     color: var(--clr-p-violet);
+}
+
+.fa-brands{
+    border-radius: 50%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.container + .icons{
+    margin-top: 3em;
+    text-align: center;
+}
+
+i + i {
+    margin-left: 1em;
+    margin-top: 0;
 }
 
 @media only screen and (min-width: 810px){
@@ -117,5 +139,16 @@ button{
     }
     .col p{
         font-size: calc(0.4rem + 1vw);
+    }
+    .container + .icons{
+        text-align: end;
+    }
+    button,
+    .fa-brands{
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: var(--clr-p-smagenta);
+        color: white;
     }
 }
