@@ -1,0 +1,121 @@
+:root{
+    --clr-p-violet: hsl(257 40% 49%);
+    --clr-p-smagenta: hsl(300 69 71);
+    --clr-p-white: hsl(0, 0%, 100%);
+
+    --ff-body-opensans: 'Open sans',sans serief;
+    --ff-header: 'Poppins',sans serief;
+    
+    --fw-400: 400;
+    --fw-600: 600;
+
+    --fs-400: 1rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2rem;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* + *{
+    margin-top: 2em;
+}
+
+
+body{
+    background-color: var(--clr-p-violet);
+    margin-top: 0;
+    min-height: 100vh;
+}
+main{
+    color: var(--clr-p-white);
+    
+    background-image: url('images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: fixed;
+    
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}
+.container{
+    width: 80%;
+    max-width: 100em;
+    margin: 0 auto;
+}
+
+
+img{
+    max-width: 100%;
+}
+.logo{
+    width: 50%;
+    max-width: 10em;
+}
+
+
+.container + .container{
+    margin-top: 2em;
+}
+.row{
+    text-align: center;
+    display: block;
+}
+
+.col h1{
+    font-size: var(--fs-500);
+    font-weight: var(--fw-600);
+}
+
+.col p{
+    line-height: 1.5;
+    font-weight: var(--fw-400);
+    font-size: var(--fs-300);
+}
+
+button{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-600);
+
+    padding: .8em 5em;
+    
+    border-radius: 100px;
+    border-style: none;
+    
+    cursor: pointer;
+    color: var(--clr-p-violet);
+}
+
+@media only screen and (min-width: 810px){
+    :root{
+        --fs-400: 1rem;
+        --fs-300: 1.5rem;
+        --fs-500: 2.5rem;
+    }
+    body{
+        background-image: url('images/bg-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    main{
+        background-image: none;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .template{
+        width: 58%;
+    }
+    .col{
+        width: 35%;
+    }
+    .col p{
+        font-size: calc(0.4rem + 1vw);
+    }
+}
